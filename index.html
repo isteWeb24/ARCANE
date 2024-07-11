@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcane Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom styles for the hamburger menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      height: 2px;
+      background: white;
+      margin-bottom: 4px;
+      width: 25px;
+    }
+
+    @media (max-width: 640px) {
+      .hamburger {
+        display: flex;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1a1a1a;
+      }
+      .nav-links a {
+        padding: 10px;
+        border-bottom: 1px solid #333;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-900">
+  <nav class="flex justify-between items-center p-4 bg-gray-900 text-white">
+    <div class="text-2xl font-bold">
+      <span class="text-orange-500">AR</span><span class="text-purple-500">CANE</span>
+    </div>
+    <div class="hidden md:flex space-x-8 nav-links">
+      <a href="#" class="hover:text-gray-400">About</a>
+      <a href="#" class="hover:text-gray-400">Workshop</a>
+      <a href="#" class="hover:text-gray-400">Highlights</a>
+      <a href="#" class="hover:text-gray-400">Contact</a>
+    </div>
+    <div class="hidden md:block">
+      <button class="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">TICKETS</button>
+    </div>
+    <div class="hamburger md:hidden" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <div class="md:hidden nav-links" id="mobileMenu">
+    <a href="#" class="hover:text-gray-400">About</a>
+    <a href="#" class="hover:text-gray-400">Workshop</a>
+    <a href="#" class="hover:text-gray-400">Highlights</a>
+    <a href="#" class="hover:text-gray-400">Contact</a>
+    <button class="bg-yellow-500 text-black px-4 py-2 rounded hover:bg-yellow-400">TICKETS</button>
+  </div>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      var menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
