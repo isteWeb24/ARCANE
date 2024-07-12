@@ -1,0 +1,196 @@
+@import url('colors.css');
+
+body {
+    background-color: black;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+
+
+
+/*navbar*/
+
+
+.navbar {
+    display: inline-flex;
+    height: 70px;
+    width: 100%;
+    justify-content: space-evenly;
+    overflow: hidden;
+    align-items: center;
+    background: linear-gradient(to right, black, rgb(45, 45, 45) 20%, rgb(53, 53, 53) 80%, black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+.navbar .arcane {
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: transparent;
+    background: linear-gradient(to right, var(--color-orange), var(--color-magenta));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.navbar .list {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar .list ul a {
+    color: white;
+    font-size: large;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.navbar .list button {
+    align-self: center;
+    background-color: var(--color-yellow);
+    height: 35px;
+    border-radius: 10px;
+}
+
+.navbar .list button:hover {
+    background-color: var(--color-orange);
+}
+
+.navbar .list button a {
+    padding-right: 30px;
+    padding-left: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+
+
+
+/*hamburger list*/
+
+.ham-list{
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    max-width: 700px;
+    min-height: 100vh;
+    display: block;
+    z-index:1999;
+    background-color: rgb(60, 60, 60);
+    padding-top: 120px;
+    transition: 0.4s;
+}
+
+.ham-list.is-active{
+    right: 0;
+}
+
+.ham-list ul{
+    text-align: center;
+    padding: 16px;
+}
+.ham-list ul a{
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    font-family: sans-serif;
+    transition: 0.3s;
+}
+.ham-list ul a:hover{
+    color: var(--color-orange);
+    font-size: 25px;
+}
+.ham-list ul button {
+    border-radius: 10px;
+    background-color: var(--color-yellow);
+    height: 40px;
+    margin-top: 10px;
+}
+.ham-list ul button a{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px;
+    color: black;
+    text-decoration: none;
+}
+.ham-list ul button a:hover{
+    color: black;
+    padding: 30px;
+}
+
+
+
+
+
+/*hamburger button*/
+
+.hamburger{
+    margin-right: 15px;
+    position: relative;
+    display: block;
+    width: 50px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+.hamburger .bars, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-8px,6px);
+}
+
+.hamburger.is-active .bars{
+    opacity: 0;
+}
+
+.hamburger.is-active::after {
+    transform: rotate(45deg) translate(-9px,-7px);
+}
+
+
+
+
+
+/*media query for navbar*/
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content:space-between;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .navbar .list {
+        display: none; 
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width:768px){
+    .navbar .hamburger{
+        display: none;
+    }
+    .ham-list{
+        display: none;
+    }
+}
