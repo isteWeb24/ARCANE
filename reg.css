@@ -1,0 +1,182 @@
+body{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: "jost",sans-serif;
+}
+section{
+    width: auto;
+    height: 110vh;
+    /* background-color: rgba(0, 255, 255, 0.182); */
+}
+main{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 100vh;
+    /* background-color: rgba(0, 255, 255, 0.182); */
+}
+.f1-box1{
+    box-sizing: border-box;
+    width: 1100px;
+    height: 800px;
+    font-size: 240px;
+    padding-top: 50px;
+    text-align: center;
+    /* background-color: rgba(0, 255, 255, 0.182); */
+}
+.heding{
+    width: fit-content;
+    height: 100px;
+    font-size: 100px;
+}
+.f1-box2{
+    box-sizing: border-box;
+    display: flex;
+    justify-content:space-between;
+    padding-top: 50px;
+    width: 1100px;
+    height: 650px;
+    /* background-color: rgba(255, 245, 238, 0.223); */
+}
+.passes{
+    box-sizing: border-box;
+    /* margin: 0 10px 0 10px; */
+    width: 31.5%;
+    height: 100%;
+    float: left;
+    /* border: 1.5px solid transparent;
+    border-image: linear-gradient(to right, darkblue, darkorchid) border-box;
+    border-radius: 10px;
+    overflow: hidden; */
+    /* border: 1px solid rgb(36, 36, 36); */
+    /* background-color: rgb(24, 24, 24); */
+}
+.gradient-border {
+    --borderWidth: 3.5px;
+    --borderRadius: 10px;
+    background: rgb(29, 29, 29);
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #fab522, #d87421, #a03a55, #5b316c, #382249);
+    border-radius: calc(2*var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  
+  @keyframes animatedgradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
+.pass-hed{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 13%;
+    font-size: 45px;
+    /* background-color: rgb(72, 72, 72); */
+}
+.pass-hed1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 94%;
+    height: 77%;
+    border-radius: 4px;
+    background-color: rgb(50, 50, 50);
+}
+.hed-nam{
+    margin: 0px;
+    margin-bottom: 10px;
+}
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: #d87421;
+}
+
+.perks{
+    box-sizing: border-box;
+    padding: 45px 30px;
+    width: 100%;
+    height: 50%;
+    font-size: 30px;
+    font-weight: lighter;
+    line-height: auto;
+    /* word-wrap: break-word; */
+    text-align: center;
+    /* background-color: rgba(240, 248, 255, 0.281); */
+}
+ul{
+    margin: 0px;
+    list-style-position: inside;
+    padding: 0px;
+    
+}
+li::marker{
+    color: #d87421;
+}
+span{
+    position: relative;
+    left: -15px;
+}
+.price{
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    height: 20%;
+    font-size: 50px;
+    /* background-color: rgba(162, 162, 255, 0.336); */
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    /* background-color: rgba(0, 255, 255, 0.195); */
+}
+.click{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    background-color: goldenrod;
+    border: 2px solid goldenrod;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.click:hover{
+    color: goldenrod;
+    background-color: #d8732100;
+    border: 2px solid goldenrod;
+}
+.click:active{
+    transform: scale(0.93);
+}
