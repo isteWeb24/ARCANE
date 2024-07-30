@@ -2,14 +2,14 @@
 
 @font-face {
     font-family: 'DotFont';
-    src: url('/DotFont.ttf') format('truetype');
+    src: url('DotFont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('/poppins.ttf') format('truetype');
+    src: url('poppins.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -474,6 +474,7 @@ body {
     padding-right: 4vw;
     font-size: 2vw;
     font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
 }
 
 .events .events-exp .divider {
