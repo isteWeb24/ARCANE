@@ -1,17 +1,39 @@
-/*Hamburger menu */
+// Hamburger menu
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger');
+    const hamList = document.querySelector('.ham-list');
+    const hamListLinks = hamList.querySelectorAll('a');
 
-const ham_button = document.querySelector('.hamburger');
-const ham_menu = document.querySelector('.ham-list');
+    hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('is-active');
+        hamList.classList.toggle('is-active');
+    });
 
-ham_button.addEventListener('click', function(){
-    ham_button.classList.toggle('is-active');
-    ham_menu.classList.toggle('is-active');
+    hamListLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            hamList.classList.remove('is-active');
+            hamburger.classList.remove('is-active');
+        });
+    });
 });
 
 
+// Carousel
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselItems = document.querySelectorAll('.carousel .card');
+    
+    carouselItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const url = item.getAttribute('data-link');
+            if (url) {
+                window.location.href = url;
+            }
+        });
+    });
+
+});
 
 
-/*carousel */
 
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
@@ -114,3 +136,36 @@ carousel.addEventListener("scroll", () => {
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 
+
+
+
+
+// Scroll
+const about = document.querySelector('#about');
+const events = document.querySelector('#events');
+const highlights = document.querySelector('#highlights');
+const contact = document.querySelector('#contact');
+const navLinks = document.querySelectorAll('header .list ul a');
+
+window.onscroll = () => {
+    const scrollPosition = window.scrollY+500;
+    
+    const sections = [
+        { section: about, link: navLinks[0] },
+        { section: events, link: navLinks[1] },
+        { section: highlights, link: navLinks[2] },
+        { section: contact, link: navLinks[3] },
+    ];
+    
+    sections.forEach(({ section, link }) => {
+        const rect = section.getBoundingClientRect();
+        const offsetTop = rect.top + window.scrollY;
+        const offsetBottom = rect.bottom + window.scrollY;
+        
+        if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+};
