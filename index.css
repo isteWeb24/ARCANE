@@ -476,6 +476,9 @@ body {
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
 }
+.events .events-item .events-view a{
+    text-decoration: none;
+}
 
 .events .events-exp .divider {
     border-bottom: 2px dotted;
