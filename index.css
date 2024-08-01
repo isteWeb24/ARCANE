@@ -255,7 +255,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: url(/assets/bg5.jpeg);
+    background: url(/assets/bg5.jpg);
     background-repeat: no-repeat;
     background-size: 1400px 90vh;
     background-position: top center;
