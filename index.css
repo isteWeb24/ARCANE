@@ -251,7 +251,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: url(/assets/bg.jpeg);
+    background: url(/assets/bg3.jpeg);
     background-repeat: no-repeat;
     background-size: 1400px 90vh;
     background-position: top center;
@@ -316,7 +316,7 @@ body {
     font-size: 15vw;
     font-family: Arial, Helvetica, sans-serif;
     color: transparent;
-    background: linear-gradient(to right, var(--color-orange), var(--color-magenta));
+    background: linear-gradient(to right, var(--color-magenta), var(--color-orange));
     -webkit-background-clip: text;
     background-clip: text;
     width: 100%;
@@ -325,6 +325,9 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 0px;
+
+    animation: bounce;
+    animation-duration: 2s
 }
 
 @media (max-width:990px) {
