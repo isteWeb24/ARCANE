@@ -251,11 +251,11 @@ body {
 /* Main container */
 
 .outer {
-    padding-top: 70vh;
+    padding-top: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: url(/assets/bg6.jpeg);
+    background: url(/assets/bg3.jpeg);
     background-repeat: no-repeat;
     background-size: 1400px 90vh;
     background-position: top center;
@@ -317,6 +317,7 @@ body {
 .outer .wrap .big-name{
     position: relative;
     margin-top: -5vw;
+    font-weight: 700;
     font-size: 15vw;
     font-family: Arial, Helvetica, sans-serif;
     color: transparent;
