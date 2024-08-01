@@ -243,6 +243,10 @@ body {
 }
 
 
+.spacer{
+    height: 50px;
+}
+
 
 /* Main container */
 
@@ -835,6 +839,10 @@ body {
     .outer{
         padding-top: 20vh;
         background-size: 400px 30vh;
+    }
+    .outer .name_and_buttons_inner .date_and_venue{
+        margin-top: -7vw;
+        margin-left: 1vw;
     }
     .info_container .info_exp {
         font-size: 3vw;
