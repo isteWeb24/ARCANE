@@ -252,13 +252,13 @@ body {
 /* Main container */
 
 .outer {
-    padding-top: 50vh;
+    padding-top: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     background: url(/assets/bg7.png);
     background-repeat: no-repeat;
-    background-size: 1400px 90vh;
+    background-size: 100% auto;
     background-position: top center;
 
 }
