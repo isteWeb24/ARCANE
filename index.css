@@ -18,6 +18,7 @@ body {
     padding-left: 10vw;
     padding-right: 10vw;
     background-color: #000000;
+    background-size: cover;
 
     overflow-y: scroll;
     overflow-x: hidden;
@@ -255,7 +256,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background: url(/assets/bg4.jpeg);
+    background: url(/assets/bg7.png);
     background-repeat: no-repeat;
     background-size: 1400px 90vh;
     background-position: top center;
@@ -837,18 +838,39 @@ body {
 
 
 @media (max-width:650px) {
+    body {
+        padding: 0;
+        background-size: cover;
+    }
     .outer{
         padding-top: 20vh;
-        background-size: 400px 30vh;
+        background-size: 100% auto;
+
     }
     .outer .name_and_buttons_inner .date_and_venue{
         margin-top: -7vw;
         margin-left: 1vw;
     }
+    .wrap{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    .info_container{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
     .info_container .info_exp {
         font-size: 3vw;
     }
+    .event_no{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
 
+    .events{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
     .events .event_title {
         font-size: 7vw;
         margin-left: -10vw;
@@ -882,9 +904,20 @@ body {
         animation-range-start: 40vh;
         animation-range-end: 50vh;
     }
+    .highlights{
+        padding-top: 5vh;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+    .wrapper{
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
 
     .wrapper .carousel {
         gap: 30vw;
+        padding-left: 20vw;
+        padding-right: 20vw;
     }
 
     .carousel .card {
@@ -904,13 +937,17 @@ body {
     }
 
     .wrapper i:last-child {
-        right: -7vw;
+        right: 0vw;
     }
 
     .wrapper i:first-child {
-        left: -7vw;
+        left: 0vw;
     }
 
+    .last_container{
+        padding-left: 9vw;
+        padding-right: 0vw;
+    }
     .contact .contact-heading {
         margin-top: 10vw;
     }
